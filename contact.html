@@ -2,222 +2,222 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | The Executive Desk by Angela Mae</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | The Executive Desk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    /* GENERAL STYLING */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
       background-color: #111;
-      color: #f2f2f2;
-      font-family: 'Lora', serif;
-      line-height: 1.6;
-    }
-
-    /* NAVBAR */
-    .navbar {
-      background-color: #1a1a1a;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    }
-    .nav-links a {
       color: #fff;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-family: 'Playfair Display', serif;
-      transition: color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
     }
-    .nav-links a:hover,
-    .nav-links a.active {
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
       color: gold;
-    }
-    .hamburger {
-      display: none;
-      background: none;
-      color: white;
-      font-size: 1.5rem;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* PAGE CONTENT */
-    .page-content {
-      padding: 7rem 2rem 4rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section-title {
-      font-size: 2.2rem;
-      font-family: 'Playfair Display', serif;
+      margin-bottom: 0.5rem;
       text-align: center;
-      margin-bottom: 1rem;
-      color: gold;
     }
 
-    .section-spaced {
-      margin-top: 3rem;
-    }
-
-    .elegant-button {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: transparent;
-      color: gold;
-      border: 1px solid gold;
-      font-family: 'Playfair Display', serif;
+    p.subtitle {
       font-size: 1rem;
-      border-radius: 30px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s ease;
+      color: #ccc;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      max-width: 600px;
     }
 
-    .elegant-button:hover {
+    .contact-section {
+      display: grid;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .card {
+      background-color: #1b1b1b;
+      border: 1px solid #333;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(255, 215, 0, 0.15);
+    }
+
+    .card i {
+      font-size: 1.8rem;
+      color: gold;
+      flex-shrink: 0;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .card-desc {
+      font-size: 0.875rem;
+      color: #aaa;
+    }
+
+    .closing {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn-talk {
       background-color: gold;
       color: #111;
-      box-shadow: 0 0 10px gold;
-    }
-
-    .cta-button {
-      background: gold;
-      color: #111;
+      padding: 0.8rem 1.5rem;
       border: none;
-      padding: 0.75em 1.5em;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
       cursor: pointer;
-      border-radius: 30px;
-      transition: all 0.3s ease;
+      transition: background 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    .cta-button:hover {
-      background: #fff2cc;
-      box-shadow: 0 0 10px gold;
+    .btn-talk:hover {
+      background-color: #ffd700cc;
     }
 
-    .section-label {
-      font-style: italic;
-      font-size: 0.9rem;
-      color: #aaa;
-      margin-top: 5px;
+    .btn-talk i {
+      font-size: 1.2rem;
     }
 
-    iframe {
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    /* ANIMATIONS */
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1.5s ease forwards;
-    }
-    .delay-1 {
-      animation-delay: 0.5s;
-    }
-    @keyframes fadeIn {
-      to { opacity: 1; transform: translateY(0); }
-      from { opacity: 0; transform: translateY(20px); }
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2rem;
       }
-      .hamburger {
-        display: block;
+
+      .card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .card-content {
+        align-items: center;
       }
     }
   </style>
-</head>
-<body>
-  <nav class="navbar">
-    <div class="nav-left"></div>
-    <div class="nav-right">
-      <button class="hamburger">☰</button>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="resume.html">Essence</a>
-        <a href="services.html">Collection</a>
-        <a href="certificates.html">Rewards</a>
-        <a href="work.html">Testimonials</a>
-        <a href="contact.html" class="active">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <main class="page-content">
-    <h1 class="section-title fade-in">Let’s Connect</h1>
-    <p class="fade-in delay-1" style="text-align: center; max-width:600px; margin:0 auto 30px;">
-      Thank you for visiting <strong>The Executive Desk</strong> by Angela Mae.<br>
-      I’d love to hear from you—whether it’s a collaboration, a project, or just a friendly hello. Let’s stay beautifully connected.
-    </p>
-
-    <div class="section-spaced fade-in delay-1">
-      <h2 class="section-title" style="font-size:1.5rem; margin-top:20px;">Text or Email Me</h2>
-      <div style="text-align:center; gap: 20px; display:flex; flex-direction:column; max-width:300px; margin:0 auto;">
-        <a href="sms:+639XXXXXXXXX" class="elegant-button">📱 +63 9XXXXXXXXX</a>
-        <span class="section-label">Send a text message</span>
-        <a href="mailto:agapeaeternaperfumeshop@gmail.com" class="elegant-button">📧 agapeaeternaperfumeshop@gmail.com</a>
-        <span class="section-label">Send an email</span>
-      </div>
-    </div>
-
-    <div class="section-spaced fade-in delay-1">
-      <h2 class="section-title" style="font-size:1.5rem; margin-top:30px;">Follow Me</h2>
-      <div style="text-align:center; gap:15px; display:flex; justify-content:center; flex-wrap: wrap;">
-        <a href="https://www.facebook.com/share/1AhMby9z3U/" target="_blank" class="elegant-button">📘 Facebook</a>
-        <a href="https://www.instagram.com/yoursafe.spot?igsh=NTJhNHA0eXd6YnF0" target="_blank" class="elegant-button">📸 Instagram</a>
-        <a href="https://www.tiktok.com/@agapeaeterna?_t=ZS-8xk9f1XaSKw&_r=1" target="_blank" class="elegant-button">🎵 TikTok</a>
-      </div>
-    </div>
-
-    <div class="section-spaced fade-in delay-1">
-      <h2 class="section-title" style="font-size:1.5rem; margin-top:30px;">Message Me via Form</h2>
-      <div style="text-align:center; max-width:800px; margin:0 auto;">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeEXAMPLE/viewform?embedded=true" width="100%" height="600">Loading…</iframe>
-        <span class="section-label">Quick message? Fill this form — I’ll respond promptly.</span>
-      </div>
-    </div>
-
-    <div class="section-spaced fade-in delay-1" style="text-align:center;">
-      <button onclick="$crisp.push(['do', 'chat:open'])" class="cta-button">💬 Let’s Talk</button>
-      <p class="section-label">Live Chat powered by Crisp</p>
-    </div>
-  </main>
-
-  <!-- Background Music -->
-  <audio id="bg-music" loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-tenderness.mp3" type="audio/mpeg">
-  </audio>
-
-  <!-- Crisp Chat -->
-  <script type="text/javascript">
+  <script>
     window.$crisp = [];
     window.CRISP_WEBSITE_ID = "9441e2e2-d7b3-4e29-bf1f-496bc3dfad92";
-    (function() {
-      var d = document;
-      var s = d.createElement("script");
-      s.src = "https://client.crisp.chat/l.js";
-      s.async = 1;
-      d.getElementsByTagName("head")[0].appendChild(s);
-    })();
+    function openChat() {
+      const d = document.createElement("script");
+      d.src = "https://client.crisp.chat/l.js";
+      d.async = 1;
+      document.getElementsByTagName("head")[0].appendChild(d);
+    }
   </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <h1>Let’s Connect</h1>
+  <p class="subtitle">I'm just a click away. Choose your preferred way to reach me — I’d be happy to talk!</p>
+
+  <div class="contact-section">
+    <a href="https://forms.gle/YOUR-FORM-HERE" target="_blank">
+      <div class="card">
+        <i class="fa-solid fa-file-lines"></i>
+        <div class="card-content">
+          <div class="card-title">Custom Request Form</div>
+          <div class="card-desc">Tell me what you need in a simple form.</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="sms:+639*********" target="_blank">
+      <div class="card">
+        <i class="fa-solid fa-comment-dots"></i>
+        <div class="card-content">
+          <div class="card-title">Text Message</div>
+          <div class="card-desc">Send a direct SMS for quick conversations.</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="mailto:agapeaeternaperfumeshop@gmail.com">
+      <div class="card">
+        <i class="fa-solid fa-envelope"></i>
+        <div class="card-content">
+          <div class="card-title">Email</div>
+          <div class="card-desc">Let’s collaborate through email — formal and fast.</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.facebook.com/share/1AhMby9z3U/" target="_blank">
+      <div class="card">
+        <i class="fab fa-facebook"></i>
+        <div class="card-content">
+          <div class="card-title">Facebook</div>
+          <div class="card-desc">Message me via my Facebook page anytime.</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.tiktok.com/@agapeaeterna?_t=ZS-8xk9f1XaSKw&_r=1" target="_blank">
+      <div class="card">
+        <i class="fab fa-tiktok"></i>
+        <div class="card-content">
+          <div class="card-title">TikTok</div>
+          <div class="card-desc">See behind-the-scenes and reach out via TikTok.</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.instagram.com/yoursafe.spot?igsh=NTJhNHA0eXd6YnF0" target="_blank">
+      <div class="card">
+        <i class="fab fa-instagram"></i>
+        <div class="card-content">
+          <div class="card-title">Instagram</div>
+          <div class="card-desc">Check updates and send a DM anytime.</div>
+        </div>
+      </div>
+    </a>
+
+    <div class="card" onclick="openChat()" style="cursor: pointer;">
+      <i class="fa-solid fa-comments"></i>
+      <div class="card-content">
+        <div class="card-title">Live Chat</div>
+        <div class="card-desc">Open real-time chat when you're ready to talk.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <p style="color: #ccc; margin-bottom: 1rem;">Still thinking? I’m always here to help.</p>
+    <button class="btn-talk" onclick="openChat()">
+      <i class="fa-solid fa-headset"></i> Let's Talk
+    </button>
+  </div>
 </body>
 </html>
