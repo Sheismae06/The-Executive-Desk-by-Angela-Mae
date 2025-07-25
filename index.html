@@ -1,56 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Executive Desk by Angela Mae</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <header class="hero-section">
-        <h1 class="main-title">The Executive Desk</h1>
-        <p class="tagline">Elegant Virtual Assistance for Visionary Clients</p>
-    </header>
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>The Executive Desk by Angela Mae</title>  
+  <!-- Google Fonts -->  
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />  
+  <!-- CSS -->  
+  <link rel="stylesheet" href="style.css?v=4" />  
+  <!-- Favicon -->  
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />  
+</head>  
+<body class="home">  
+  <nav class="navbar">  
+    <div class="nav-left">  
+      <!-- Music toggle removed -->  
+    </div>  
+    <div class="nav-right">  
+      <button class="hamburger">☰</button>  
+      <div class="nav-links">  
+        <a href="index.html" class="active">Home</a>  
+        <a href="resume.html">Essence</a>  
+        <a href="services.html">Collection</a>  
+        <a href="certificates.html">Rewards</a>  
+        <a href="work.html">Testimonials</a>  
+        <a href="contact.html">Contact</a>  
+      </div>  
+    </div>  
+  </nav>  
 
-    <section class="services">
-        <h2>Services</h2>
-        <ul>
-            <li>Inbox & Calendar Management</li>
-            <li>Customer Service & Chat Support</li>
-            <li>Data Entry, Reports & Excel</li>
-            <li>Social Media Scheduling</li>
-        </ul>
-    </section>
+  <!-- Hero Section -->  
+  <section class="hero">  
+    <h1 class="tagline">Where Excellence Meets Execution.</h1>  
+  </section>  
 
-    <section class="portfolio">
-        <h2>Portfolio Highlights</h2>
-        <p>Sample tasks and successful projects handled with grace and precision.</p>
-    </section>
-
-    <section class="testimonials">
-        <h2>What Clients Say</h2>
-        <blockquote>"Angela Mae transformed the way I run my business. Professional and reliable!"</blockquote>
-    </section>
-
-    <section class="about">
-        <h2>About Angela Mae</h2>
-        <p>With over 2 years in BPO and a passion for excellence, I provide high-impact support to clients worldwide.</p>
-    </section>
-
-    <section class="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-buttons">
-            <a href="mailto:your.email@example.com" class="btn">Email</a>
-            <a href="https://m.me/yourfbusername" class="btn">Messenger</a>
-            <a href="https://forms.gle/your-google-form-link" class="btn">Google Form</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 The Executive Desk by Angela Mae</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+  <!-- Script -->  
+  <script>  
+    document.addEventListener('DOMContentLoaded', function () {  
+      const hamburger = document.querySelector('.hamburger');  
+      const navLinks = document.querySelector('.nav-links');  
+  
+      hamburger?.addEventListener('click', () => {  
+        hamburger.classList.toggle('active');  
+        navLinks.classList.toggle('open');  
+      });  
+    });  
+  </script>  
+</body>  
 </html>
