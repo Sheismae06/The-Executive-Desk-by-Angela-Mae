@@ -1,68 +1,223 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-  <meta charset="UTF-8" />  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
-  <title>Contact | The Executive Desk by Angela Mae</title>  
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">  
-  <link rel="stylesheet" href="style.css?v=3" />  
-  <script src="script.js" defer></script>  
-</head>  
-<body>  
-  <nav class="navbar">  
-    <div class="nav-left">  
-          <path d="M5 3v18h14V3H5zm2 2h2v6h1V5h2v6h1V5h2v6h1V5h2v14H7V5z"/>  
-        </svg>   
-          <line x1="1" y1="1" x2="23" y2="23" stroke-width="2" />  
-        </svg>  
-      </div>  
-    </div>  
-    <div class="nav-right">  
-      <button class="hamburger">☰</button>  
-      <div class="nav-links">  
-        <a href="index.html">Home</a>  
-        <a href="resume.html">Essence</a>  
-        <a href="services.html">Collection</a>  
-        <a href="certificates.html">Rewards</a>  
-        <a href="work.html">Testimonials</a>  
-        <a href="contact.html" class="active">Contact</a>  
-      </div>  
-    </div>  
-  </nav>    <h1 class="section-title">Whispers of Connection</h1>    <main class="page-content">  
-    <p style="text-align: center; max-width:600px; margin:0 auto 30px;">  
-      Thank you for visiting Agape Aeterna.<br>  
-      We’re delighted to connect with you. Below are the channels where you can reach us—feel free to send us a message anytime, and we’ll respond as soon as we can. Let’s stay beautifully connected.  
-    </p>  <div class="section-spaced">  
-  <h2 class="section-title" style="font-size:1.5rem; margin-top:20px; margin-bottom:10px;">Text or Email Us</h2>  
-  <div style="text-align:center; gap: 20px; display:flex; flex-direction:column; max-width:300px; margin:0 auto;">  
-    <a href="sms:+639XXXXXXXXX" class="elegant-button">+63 9XXXXXXXXX</a>  
-    <a href="mailto:agapeaeternaperfumeshop@gmail.com" class="elegant-button">agapeaeternaperfumeshop@gmail.com</a>  
-  </div>  
-</div>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | The Executive Desk by Angela Mae</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <style>
+    /* GENERAL STYLING */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #111;
+      color: #f2f2f2;
+      font-family: 'Lora', serif;
+      line-height: 1.6;
+    }
 
-<div class="section-spaced">  
-  <h2 class="section-title" style="font-size:1.5rem; margin-top:30px; margin-bottom:10px;">Follow Us</h2>  
-  <div style="text-align:center; gap:15px; display:flex; justify-content:center;">  
-    <a href="https://www.facebook.com/share/1AhMby9z3U/" target="_blank" class="elegant-button">Facebook</a>  
-    <a href="https://www.instagram.com/yoursafe.spot?igsh=NTJhNHA0eXd6YnF0" target="_blank" class="elegant-button">Instagram</a>  
-    <a href="https://www.tiktok.com/@agapeaeterna?_t=ZS-8xk9f1XaSKw&_r=1" target="_blank" class="elegant-button">TikTok</a>  
-  </div>  
-</div>  
+    /* NAVBAR */
+    .navbar {
+      background-color: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-family: 'Playfair Display', serif;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: gold;
+    }
+    .hamburger {
+      display: none;
+      background: none;
+      color: white;
+      font-size: 1.5rem;
+      border: none;
+      cursor: pointer;
+    }
 
-<div class="section-spaced" style="text-align:center;">  
-  <a onclick="$crisp.push(['do', 'chat:open'])" class="elegant-button">Start Live Chat</a>  
-</div>
+    /* PAGE CONTENT */
+    .page-content {
+      padding: 7rem 2rem 4rem;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-  </main>    <!-- Global Background Music -->    <audio id="bg-music" loop>  
-    <source src="https://www.bensound.com/bensound-music/bensound-tenderness.mp3" type="audio/mpeg">  
-  </audio>    <script type="text/javascript">  
-    window.$crisp = [];  
-    window.CRISP_WEBSITE_ID = "9441e2e2-d7b3-4e29-bf1f-496bc3dfad92";  
-    (function() {  
-      var d = document;  
-      var s = d.createElement("script");  
-      s.src = "https://client.crisp.chat/l.js";  
-      s.async = 1;  
-      d.getElementsByTagName("head")[0].appendChild(s);  
-    })();  
-  </script>  </body>  
+    .section-title {
+      font-size: 2.2rem;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: gold;
+    }
+
+    .section-spaced {
+      margin-top: 3rem;
+    }
+
+    .elegant-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: transparent;
+      color: gold;
+      border: 1px solid gold;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .elegant-button:hover {
+      background-color: gold;
+      color: #111;
+      box-shadow: 0 0 10px gold;
+    }
+
+    .cta-button {
+      background: gold;
+      color: #111;
+      border: none;
+      padding: 0.75em 1.5em;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #fff2cc;
+      box-shadow: 0 0 10px gold;
+    }
+
+    .section-label {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 5px;
+    }
+
+    iframe {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+    }
+
+    /* ANIMATIONS */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    .delay-1 {
+      animation-delay: 0.5s;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(20px); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left"></div>
+    <div class="nav-right">
+      <button class="hamburger">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Essence</a>
+        <a href="services.html">Collection</a>
+        <a href="certificates.html">Rewards</a>
+        <a href="work.html">Testimonials</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-content">
+    <h1 class="section-title fade-in">Let’s Connect</h1>
+    <p class="fade-in delay-1" style="text-align: center; max-width:600px; margin:0 auto 30px;">
+      Thank you for visiting <strong>The Executive Desk</strong> by Angela Mae.<br>
+      I’d love to hear from you—whether it’s a collaboration, a project, or just a friendly hello. Let’s stay beautifully connected.
+    </p>
+
+    <div class="section-spaced fade-in delay-1">
+      <h2 class="section-title" style="font-size:1.5rem; margin-top:20px;">Text or Email Me</h2>
+      <div style="text-align:center; gap: 20px; display:flex; flex-direction:column; max-width:300px; margin:0 auto;">
+        <a href="sms:+639XXXXXXXXX" class="elegant-button">📱 +63 9XXXXXXXXX</a>
+        <span class="section-label">Send a text message</span>
+        <a href="mailto:agapeaeternaperfumeshop@gmail.com" class="elegant-button">📧 agapeaeternaperfumeshop@gmail.com</a>
+        <span class="section-label">Send an email</span>
+      </div>
+    </div>
+
+    <div class="section-spaced fade-in delay-1">
+      <h2 class="section-title" style="font-size:1.5rem; margin-top:30px;">Follow Me</h2>
+      <div style="text-align:center; gap:15px; display:flex; justify-content:center; flex-wrap: wrap;">
+        <a href="https://www.facebook.com/share/1AhMby9z3U/" target="_blank" class="elegant-button">📘 Facebook</a>
+        <a href="https://www.instagram.com/yoursafe.spot?igsh=NTJhNHA0eXd6YnF0" target="_blank" class="elegant-button">📸 Instagram</a>
+        <a href="https://www.tiktok.com/@agapeaeterna?_t=ZS-8xk9f1XaSKw&_r=1" target="_blank" class="elegant-button">🎵 TikTok</a>
+      </div>
+    </div>
+
+    <div class="section-spaced fade-in delay-1">
+      <h2 class="section-title" style="font-size:1.5rem; margin-top:30px;">Message Me via Form</h2>
+      <div style="text-align:center; max-width:800px; margin:0 auto;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeEXAMPLE/viewform?embedded=true" width="100%" height="600">Loading…</iframe>
+        <span class="section-label">Quick message? Fill this form — I’ll respond promptly.</span>
+      </div>
+    </div>
+
+    <div class="section-spaced fade-in delay-1" style="text-align:center;">
+      <button onclick="$crisp.push(['do', 'chat:open'])" class="cta-button">💬 Let’s Talk</button>
+      <p class="section-label">Live Chat powered by Crisp</p>
+    </div>
+  </main>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-tenderness.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Crisp Chat -->
+  <script type="text/javascript">
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = "9441e2e2-d7b3-4e29-bf1f-496bc3dfad92";
+    (function() {
+      var d = document;
+      var s = d.createElement("script");
+      s.src = "https://client.crisp.chat/l.js";
+      s.async = 1;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+  </script>
+</body>
 </html>
