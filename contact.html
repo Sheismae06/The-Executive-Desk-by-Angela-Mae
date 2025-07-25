@@ -3,221 +3,259 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | The Executive Desk</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Contact | The Executive Desk by Angela Mae</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
       background-color: #111;
-      color: #fff;
+      font-family: 'Lora', serif;
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1b1b1b;
+      padding: 10px 20px;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      padding: 2rem 1rem;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: gold;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 2px;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #1b1b1b;
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+    }
+
+    main {
+      padding: 100px 20px 50px;
+      text-align: center;
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
       color: gold;
-      margin-bottom: 0.5rem;
-      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
     }
 
     p.subtitle {
-      font-size: 1rem;
       color: #ccc;
-      margin-bottom: 2.5rem;
-      text-align: center;
-      max-width: 600px;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
     }
 
     .contact-section {
-      display: grid;
-      gap: 1.5rem;
-      width: 100%;
-      max-width: 700px;
-    }
-
-    .card {
-      background-color: #1b1b1b;
-      border: 1px solid #333;
-      border-radius: 1.5rem;
-      padding: 1.5rem;
       display: flex;
-      align-items: center;
-      gap: 1rem;
-      transition: transform 0.3s, box-shadow 0.3s;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 50px;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(255, 215, 0, 0.15);
+    .contact-card {
+      background: #222;
+      padding: 20px;
+      border-radius: 12px;
+      width: 250px;
+      transition: transform 0.3s;
     }
 
-    .card i {
-      font-size: 1.8rem;
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-card i {
+      font-size: 2rem;
       color: gold;
-      flex-shrink: 0;
+      margin-bottom: 10px;
     }
 
-    .card-content {
-      display: flex;
-      flex-direction: column;
+    .contact-card p {
+      margin: 10px 0 0;
+      font-size: 0.95rem;
+      color: #ccc;
     }
 
-    .card-title {
-      font-weight: 600;
-      font-size: 1rem;
-      color: #fff;
+    .social-section {
+      margin-top: 30px;
     }
 
-    .card-desc {
-      font-size: 0.875rem;
-      color: #aaa;
+    .social-section h2 {
+      font-family: 'Playfair Display';
+      font-size: 1.2rem;
+      color: white;
+      margin-bottom: 20px;
     }
 
-    .closing {
-      margin-top: 3rem;
-      text-align: center;
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.5rem;
+      transition: color 0.3s;
     }
 
-    .btn-talk {
+    .social-icons a:hover {
+      color: gold;
+    }
+
+    .lets-talk {
+      margin-top: 60px;
+    }
+
+    .lets-talk button {
       background-color: gold;
       color: #111;
-      padding: 0.8rem 1.5rem;
+      padding: 12px 30px;
       border: none;
-      border-radius: 2rem;
-      font-weight: 600;
+      border-radius: 30px;
       font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+      transition: background-color 0.3s;
     }
 
-    .btn-talk:hover {
-      background-color: #ffd700cc;
+    .lets-talk button:hover {
+      background-color: #e6c200;
     }
 
-    .btn-talk i {
-      font-size: 1.2rem;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .card {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-      }
-
-      .card-content {
-        align-items: center;
-      }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
-  <script>
-    window.$crisp = [];
-    window.CRISP_WEBSITE_ID = "9441e2e2-d7b3-4e29-bf1f-496bc3dfad92";
-    function openChat() {
-      const d = document.createElement("script");
-      d.src = "https://client.crisp.chat/l.js";
-      d.async = 1;
-      document.getElementsByTagName("head")[0].appendChild(d);
-    }
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <h1>Let’s Connect</h1>
-  <p class="subtitle">I'm just a click away. Choose your preferred way to reach me — I’d be happy to talk!</p>
 
-  <div class="contact-section">
-    <a href="https://forms.gle/YOUR-FORM-HERE" target="_blank">
-      <div class="card">
-        <i class="fa-solid fa-file-lines"></i>
-        <div class="card-content">
-          <div class="card-title">Custom Request Form</div>
-          <div class="card-desc">Tell me what you need in a simple form.</div>
-        </div>
+  <header>
+    <div class="logo">Executive Desk</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="essence.html">Essence</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="contact.html" style="color: gold;">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Me</h1>
+    <p class="subtitle">Let’s build something meaningful together.</p>
+
+    <div class="contact-section">
+      <div class="contact-card">
+        <i class="fas fa-sms"></i>
+        <p><a href="sms:+639*********">Text me directly</a></p>
       </div>
-    </a>
-
-    <a href="sms:+639*********" target="_blank">
-      <div class="card">
-        <i class="fa-solid fa-comment-dots"></i>
-        <div class="card-content">
-          <div class="card-title">Text Message</div>
-          <div class="card-desc">Send a direct SMS for quick conversations.</div>
-        </div>
+      <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <p><a href="mailto:agapeaeternaperfumeshop@gmail.com">Send an email</a></p>
       </div>
-    </a>
-
-    <a href="mailto:agapeaeternaperfumeshop@gmail.com">
-      <div class="card">
-        <i class="fa-solid fa-envelope"></i>
-        <div class="card-content">
-          <div class="card-title">Email</div>
-          <div class="card-desc">Let’s collaborate through email — formal and fast.</div>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://www.facebook.com/share/1AhMby9z3U/" target="_blank">
-      <div class="card">
-        <i class="fab fa-facebook"></i>
-        <div class="card-content">
-          <div class="card-title">Facebook</div>
-          <div class="card-desc">Message me via my Facebook page anytime.</div>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://www.tiktok.com/@agapeaeterna?_t=ZS-8xk9f1XaSKw&_r=1" target="_blank">
-      <div class="card">
-        <i class="fab fa-tiktok"></i>
-        <div class="card-content">
-          <div class="card-title">TikTok</div>
-          <div class="card-desc">See behind-the-scenes and reach out via TikTok.</div>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://www.instagram.com/yoursafe.spot?igsh=NTJhNHA0eXd6YnF0" target="_blank">
-      <div class="card">
-        <i class="fab fa-instagram"></i>
-        <div class="card-content">
-          <div class="card-title">Instagram</div>
-          <div class="card-desc">Check updates and send a DM anytime.</div>
-        </div>
-      </div>
-    </a>
-
-    <div class="card" onclick="openChat()" style="cursor: pointer;">
-      <i class="fa-solid fa-comments"></i>
-      <div class="card-content">
-        <div class="card-title">Live Chat</div>
-        <div class="card-desc">Open real-time chat when you're ready to talk.</div>
+      <div class="contact-card">
+        <i class="fas fa-file-alt"></i>
+        <p><a href="https://forms.gle/your-form-link">Fill out the Google Form</a></p>
       </div>
     </div>
-  </div>
 
-  <div class="closing">
-    <p style="color: #ccc; margin-bottom: 1rem;">Still thinking? I’m always here to help.</p>
-    <button class="btn-talk" onclick="openChat()">
-      <i class="fa-solid fa-headset"></i> Let's Talk
-    </button>
-  </div>
+    <div class="social-section">
+      <h2>Reach me on social platforms</h2>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/1AhMby9z3U/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/yoursafe.spot" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@agapeaeterna" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <div class="lets-talk">
+      <p>Click below to chat with me in real-time — I’m here to help.</p>
+      <button onclick="launchChat()">Let’s Talk</button>
+    </div>
+
+    <footer>
+      &copy; 2025 The Executive Desk by Angela Mae. All rights reserved.
+    </footer>
+  </main>
+
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Crisp Chat script (hidden by default, launches only on button click) -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('show');
+    }
+
+    function launchChat() {
+      $crisp.push(["do", "chat:open"]);
+    }
+
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = "9441e2e2-d7b3-4e29-bf1f-496bc3dfad92";
+    (function () {
+      var d = document;
+      var s = d.createElement("script");
+      s.src = "https://client.crisp.chat/l.js";
+      s.async = 1;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+  </script>
 </body>
 </html>
